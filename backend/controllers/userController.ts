@@ -45,7 +45,7 @@ const userSignin = async (req: Request, res: Response) => {
 
   //checking if email already exists
   const user = await User.findOne({ email });
-  if (!user) return res.status(401).json({ error: 'Wrong email or password' });
+  if (!user) return res.status(401).json({ error: 'User does not exist!' });
   else {
     //checking if password is correct
     const passwordValidates = await bcrypt.compare(
