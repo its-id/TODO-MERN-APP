@@ -26,7 +26,7 @@ const AuthProvider = (props: any) => {
 
   const [state, dispatch] = useReducer(AuthReducer, initialState);
 
-  const url = process.env.REACT_APP_BACKEND_URL || 'http://localhost:3001';
+  const url = import.meta.env.REACT_APP_BACKEND_URL || 'http://localhost:3001';
 
   // Set token and load user
   const loadUser = async () => {
