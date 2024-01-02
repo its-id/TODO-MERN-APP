@@ -230,7 +230,7 @@ const TodoLayout = () => {
         <Link to='https://twitter.com/its_ikD' target='_blank'>
           <img src={twitterIcon} alt='twitter' className='w-10 h-10' />
         </Link>
-        <Link to='#' target='_blank'>
+        <Link to='https://github.com/its-id/TODO-MERN-APP' target='_blank'>
           <img src={githubIcon} alt='github' className='w-10 h-10' />
         </Link>
         <Button

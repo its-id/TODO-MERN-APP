@@ -40,7 +40,7 @@ const Page404 = () => {
             <img src={twitterIcon} alt='twitter' className='w-6 h-6' />
           </Link>
           <Link
-            to='#'
+            to='https://github.com/its-id/TODO-MERN-APP'
             className='text-sm font-medium text-gray-400 hover:text-gray-600'
           >
             <img src={githubIcon} alt='github' className='w-6 h-6' />
