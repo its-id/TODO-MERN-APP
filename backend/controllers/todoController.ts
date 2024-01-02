@@ -1,5 +1,6 @@
 import { createTodoSchema, updateTodoSchema } from '../types/todo';
 import Todo from '../models/todo';
+import User from '../models/user';
 import { Request, Response } from 'express';
 
 const createTodo = async (req: Request, res: Response) => {
@@ -19,6 +20,11 @@ const createTodo = async (req: Request, res: Response) => {
 
   try {
     await todo.save();
+
+    const user: any = await User.findOne({ email: createPayload.email });
+    user.todos.push(todo._id);
+    await user.save();
+    
     res.status(201).json({ todo, message: 'Todo Created Successfully!' });
   } catch (error) {
     res.status(500).json({ error });
@@ -27,7 +33,15 @@ const createTodo = async (req: Request, res: Response) => {
 
 const getTodos = async (req: Request, res: Response) => {
   try {
-    const todos = await Todo.find({});
+    const { email } = req.body;
+    const user: any = await User.findOne({ email });
+
+    let todos: any[] = [];
+    for (let todoId of user.todos) {
+      const todoData: any = await Todo.findById(todoId);
+      todos.push(todoData);
+    }
+
     res.status(200).json({ todos });
   } catch (error) {
     res.status(500).json({ error });

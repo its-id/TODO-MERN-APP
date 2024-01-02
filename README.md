@@ -22,15 +22,18 @@ A simple TODO App just made a bit "FullStack". 🔨
 
 ## Instructions to Run
 
+### First, run the Backend
+1.  `cd backend`
+2. `npm i`
+3. Create the .env file containing the following data: Your MongodDB conection URL, Your JWT secret. (check .env.example for the format)
+3. `npm run dev`
+
 ### Frontend
 1. `cd frontend`
 2. `npm i`
 3. `npm run dev`
 
-### Backend
-1.  `cd backend`
-2. `npm i`
-3. `npm run dev`
+
 
 ## Some Issues you can encounter
 If get the **`punnycode`** error when running the backend. Simply:
