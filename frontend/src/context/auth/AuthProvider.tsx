@@ -1,5 +1,4 @@
 import { useEffect, useReducer } from 'react';
-import toast from 'react-hot-toast';
 import axios from 'axios';
 
 import setAuthToken from '../../utils/SetAuthToken';
