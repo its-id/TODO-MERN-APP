@@ -20,7 +20,8 @@ const AuthProvider = (props: any) => {
   const initialState = {
     user: null,
     loading: false,
-    isAuthenticated: null,
+    isRegistered: false,
+    isAuthenticated: false,
     error: null,
   };
 
@@ -116,6 +117,7 @@ const AuthProvider = (props: any) => {
       value={{
         loading: state.loading,
         user: state.user,
+        isRegistered: state.isRegistered,
         isAuthenticated: state.isAuthenticated,
         error: state.error,
         signup,

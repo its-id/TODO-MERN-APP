@@ -23,7 +23,7 @@ const Signup = ({ context: path }: any) => {
   });
   const [registering, setRegistering] = useState(false);
 
-  const { isAuthenticated, error, clearError, signup } =
+  const { isRegistered, error, clearError, signup } =
     useContext<UserState>(AuthContext);
 
   const checkValid = () => {
@@ -123,10 +123,10 @@ const Signup = ({ context: path }: any) => {
   };
 
   useEffect(() => {
-    if (isAuthenticated) {
+    if (isRegistered) {
       navigate('/');
     }
-  }, [isAuthenticated, path]);
+  }, [isRegistered, path]);
 
   useEffect(() => {
     if (error) {

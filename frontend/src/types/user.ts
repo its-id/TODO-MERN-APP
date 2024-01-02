@@ -11,6 +11,7 @@ interface UserState {
   error?: string;
   user?: User | null;
   isAuthenticated?: boolean;
+  isRegistered?: boolean;
   clearError: () => void;
   signup: (formData: User) => void;
   signin: (formData: User) => void;
