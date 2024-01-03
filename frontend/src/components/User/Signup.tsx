@@ -233,7 +233,7 @@ const Signup = ({ context: path }: any) => {
 
               <div>
                 <Button
-                  text={registering ? 'Logging In..' : 'Log In'}
+                  text={registering ? 'Signin Up..' : 'Sign Up'}
                   variant='success'
                   onClick={handleSubmit}
                 />

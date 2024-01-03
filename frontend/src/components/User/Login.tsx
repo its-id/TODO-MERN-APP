@@ -19,6 +19,7 @@ const Login = ({ context: path }: any) => {
     email: '',
     password: '',
   });
+  const [login, setLogin] = useState(false);
 
   const { isAuthenticated, error, clearError, signin } =
     useContext<UserState>(AuthContext);
@@ -57,6 +58,7 @@ const Login = ({ context: path }: any) => {
     }
 
     try {
+      setLogin(true);
       await signin(user);
       if (!error) {
         toast.success('Logged in Successfully', {
@@ -89,6 +91,7 @@ const Login = ({ context: path }: any) => {
 
   useEffect(() => {
     if (error) {
+      setLogin(false);
       toast.error(error, {
         style: {
           background: '#333',
@@ -156,7 +159,7 @@ const Login = ({ context: path }: any) => {
 
               <div>
                 <Button
-                  text='Sign In'
+                  text={login ? 'Signing In..' : 'Sign In'}
                   onClick={handleSubmit}
                   variant='success'
                 />
