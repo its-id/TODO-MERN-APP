@@ -26,7 +26,7 @@ const TodoProvider = (props: any) => {
 
   const [state, dispatch] = useReducer(TodoReducer, initialState);
 
-  const url = import.meta.env.REACT_APP_BACKEND_URL; //or 'http://localhost:3001';
+  const url = import.meta.env.VITE_BACKEND_URL; //or 'http://localhost:3001';
 
   const getTodos = async () => {
     try {
