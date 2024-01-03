@@ -20,17 +20,18 @@ A simple TODO App just made a bit "FullStack". 🔨
 - Implementing OTP verification, Google and other third party auth.
 - Maybe some UI revamps.
 
-## Instructions to Run
+## Instructions to Run Locally
 
 ### First, run the Backend
 1.  `cd backend`
 2. `npm i`
-3. Create the .env file containing the following data: Your MongodDB conection URL, Your JWT secret. (check .env.example for the format)
+3. Create the .env file containing the following data: Your MongodDB conection URL, Your JWT secret and Frontend URL. (check .env.example for the format)
 3. `npm run dev`
 
 ### Frontend
 1. `cd frontend`
 2. `npm i`
+3. Go to `AuthProvider.tsx` and `TodoProvider.tsx`. Replace `import.meta.env.VITE_BACKEND_URL` with your Backend URL.
 3. `npm run dev`
 
 
