@@ -25,7 +25,7 @@ Dummy credentials to try out: <br/>
 - Adheres industry standard coding practices.
 
 ## Future Works
-- Giving User Todos based on selected date.
+- Giving User Todos based on selected date. <br/>
 - Implementing OTP verification, Google and other third party auth.
 - Maybe some UI revamps.
 
