@@ -29,6 +29,9 @@ Dummy credentials to try out: <br/>
 - Implementing OTP verification, Google and other third party auth.
 - Maybe some UI revamps.
 
+> **Tech Stack Used: React, Node, Express, MongoDB, TS.**
+> **Additional Libraries: Tailwind, deep-email-validator, jsonwebtoken, zod, react-router-dom, axios.**
+
 ## Instructions to Run Locally
 
 ### First, run the Backend
